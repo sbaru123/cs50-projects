@@ -11,19 +11,26 @@ int main(void)
 
 void pyramid(int height) {
 
-    for (int i = 0; i < height; i++) {
+    for (int row = 1; row <= height; row++) {
 
         for (int spaces = 0; spaces < height - 1; spaces++ ) {
 
             printf(" ");
         }
 
-         for (int bricks = height; bricks > 0; spaces++ ) {
+         for (int bricks = 0; bricks < row; bricks++ ) {
 
             printf("#");
         }
 
+        printf(" ");
+
+         for (int bricks = 0; bricks < row; bricks++ ) {
+
+            printf("#");
+        }
+        printf("\n");
     }
-printf("\n");
+
 }
-}
+
