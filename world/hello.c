@@ -1,9 +1,9 @@
+#include <cs50.h>
 #include <stdio.h>
-#include <cs50.h> 
 
 
-int main (void) {
-
-    printf("hellow, world\n");
-
+int main(void)
+{
+    //prints hello world and moves cursor to next line
+    printf("hello, world\n");
 }
