@@ -6,6 +6,10 @@ void pyramid(int height);
 int main(void)
 {
     int input = get_int("Height: ");
+
+    if (input > 8 || input < 1) {
+        input = get_int("Height: ");
+    }
     pyramid(input);
 }
 
