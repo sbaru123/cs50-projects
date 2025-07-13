@@ -1,18 +1,23 @@
 #include <cs50.h>
 #include <stdio.h>
 
+void pyramid(int height);
+
 int main(void)
 {
-    pyramid(3);
+    int input = get_int("Height: ");
+    pyramid(input);
 }
 
 void pyramid(int height) {
 
     for (int i = 0; i < height; i++) {
 
-        for (int j = 0; j <  )
+        for (int j = 0; j < height; j++ ) {
+
+            printf("#");
 
     }
-
-
+printf("\n");
+}
 }
