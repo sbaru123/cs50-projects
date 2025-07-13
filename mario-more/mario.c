@@ -7,13 +7,11 @@ int main(void)
 {
     int input = get_int("Height: ");
 
-    if (input <= 8 && input >= 1) {
-        pyramid(input);
-    }
-    else {
+    while (input > 8 || input < 1) {
         input = get_int("Height: ");
     }
 
+    pyramid(input);
 }
 
 void pyramid(int height) {
