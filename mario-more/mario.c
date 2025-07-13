@@ -6,9 +6,13 @@ int main(void)
     pyramid(3);
 }
 
-void pyramid(int bricks) {
+void pyramid(int height) {
 
-    for (int i = 0; i < bricks; )
+    for (int i = 0; i < height; i++) {
+
+        for (int j = 0; j <  )
+
+    }
 
 
 }
