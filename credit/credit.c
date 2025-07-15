@@ -18,7 +18,7 @@ if (card / 10000000000000 == 34 || card / 10000000000000 == 37) {
   name = "AMEX";
   index = 17;
 }
-else if (card / 100000000000000 == 4 ) {
+else if (card / 1000000000000000 == 4 ) {
   name = "VISA";
   index = 18;
 }
