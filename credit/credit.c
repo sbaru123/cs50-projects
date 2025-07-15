@@ -31,7 +31,7 @@ else if (card / 100000000000000 == 51 || card / 100000000000000 == 52 || card / 
   index = 18;
 }
 else {
-  name = "INVALID\n";
+  name = "No name\n";
   index = 20;
 }
 
