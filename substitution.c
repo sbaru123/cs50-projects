@@ -6,12 +6,12 @@
 
 int main (int argc, string argv[]) {
 
-if (strlen(argv[1]) == 0) {
+if (argc == 1) {
 
-    printf("Usage: ./substitution key");
+    printf("Usage: ./substitution key\n");
 }
 else if (strlen(argv[1]) != 26) {
-        printf("Key must contain 26 characters.");
+        printf("Key must contain 26 characters.\n");
     }
     else {
         string plaintext = get_string("plaintext: ");
