@@ -6,7 +6,7 @@
 
 int main (int argc, string argv[]) {
 
-if (argc == 1) {
+if (argc != 2) {
 
     printf("Usage: ./substitution key\n");
 }
@@ -16,6 +16,14 @@ else if (strlen(argv[1]) != 26) {
     else {
         string plaintext = get_string("plaintext: ");
     }
+    string key = argv[1];
+    printf("%s" , encrypt(plaintext , key));
+}
+
+string encrypt (string text , string key) {
+
+    
+
 }
 
 
