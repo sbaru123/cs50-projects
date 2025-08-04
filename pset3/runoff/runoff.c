@@ -153,10 +153,11 @@ void tabulate(void)
             else if (candidates[j].eliminated == true) {
                 col++;
                 eliminatedIndex = j;
+                j = -1; 
             }
             else if (j == eliminatedIndex) {
                 j++;
-                j--; 
+                j--;
             }
         }
     }
