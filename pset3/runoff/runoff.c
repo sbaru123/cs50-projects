@@ -155,7 +155,8 @@ void tabulate(void)
                 eliminatedIndex = j;
             }
             else if (j == eliminatedIndex) {
-                
+                j++;
+                j--; 
             }
         }
     }
