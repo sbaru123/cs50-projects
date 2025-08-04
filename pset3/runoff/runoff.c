@@ -151,8 +151,9 @@ void tabulate(void)
             }
             else if (candidates[j].eliminated == true) {
                 col++;
-                 for (int k = 0; k < candidate_count; k++) {
-                    
+                while (candidates[j].eliminated == true) {
+                   
+                }
                  }
             }
         }
