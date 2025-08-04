@@ -1,0 +1,11 @@
+sort1 uses: Bubble Sort
+
+How do you know?: The run times are very different from reversed5000 and sorted5000.
+
+sort2 uses: Merge Sort
+
+How do you know?: The run times are faster for all types of data.
+
+sort3 uses: Selection Sort
+
+How do you know?: The run times are the slowest for all types of data. 
