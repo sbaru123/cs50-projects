@@ -185,8 +185,13 @@ return smallest;
 // Return true if the election is tied between all candidates, false otherwise
 bool is_tie(int min)
 {
-    
-    return false;
+    int constant = candidates[0].votes; 
+    for (int i = 0; i < candidate_count; i++) {
+    if ((candidates[i].eliminated == false) && (candidates[i].votes != constant) {
+       return false;
+    }
+}
+return true;
 }
 
 // Eliminate the candidate (or candidates) in last place
