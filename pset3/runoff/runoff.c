@@ -150,10 +150,10 @@ void tabulate(void)
             if (preferences[i][col] == j && candidates[j].eliminated != true && j != eliminatedIndex) {
                 candidates[j].votes++;
             }
-            else if (candidates[j].eliminated == true) {
+            else if (candidates[j].eliminated == true && j != eliminatedIndex) {
                 col++;
                 eliminatedIndex = j;
-                j = -1; 
+                j = -1;
             }
             else if (j == eliminatedIndex) {
                 j++;
