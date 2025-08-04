@@ -164,7 +164,7 @@ bool print_winner(void)
     for (int i = 0; i < candidate_count; i++) {
         if (candidates[i].votes > half_count) {
             printf("%s\n" , candidates[i].name);
-            return true; 
+            return true;
         }
     }
     return false;
@@ -173,7 +173,7 @@ bool print_winner(void)
 // Return the minimum number of votes any remaining candidate has
 int find_min(void)
 {
-    // TODO
+    
     return 0;
 }
 
