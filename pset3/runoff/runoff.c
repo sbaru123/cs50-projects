@@ -151,7 +151,7 @@ void tabulate(void)
             }
             else if (candidates[j].eliminated == true) {
                 col++;
-                j--;
+                j = 0;
             }
         }
     }
