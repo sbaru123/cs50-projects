@@ -66,7 +66,8 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
                 middle = image[i][round(width / 2)];
             }
             temp = image[i][width - j];
-            image[i][width - j] = image[i][j]; 
+            image[i][width - j] = image[i][j];
+            image[i][j] = temp; 
 
         }
     }
