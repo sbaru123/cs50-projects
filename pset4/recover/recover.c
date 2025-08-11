@@ -30,7 +30,6 @@ int main(int argc, char *argv[])
         }
         else (count > 0) {
             fclose(img);
-
         }
     }
    }
