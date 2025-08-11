@@ -126,7 +126,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 avgGreen += copy[i + 1][j + 1].rgbtGreen;
                 count++;
              }
-             avgRed /= count;
+             avgRed = avgRed / count;
              avgBlue /= count;
              avgGreen /= count;
 
