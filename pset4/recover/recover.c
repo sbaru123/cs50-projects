@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 
    while (fread(&buffer, sizeof(uint8_t), 1, memoryCard) == 512) {
     if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] && 0xf0) == 0xe0) {
-        sprintf()
+        sprintf(memoryCard , "%03i.jpg" , 2); 
     }
    }
 
