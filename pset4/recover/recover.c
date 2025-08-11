@@ -10,13 +10,17 @@ int main(int argc, char *argv[])
     }
 
     FILE *memoryCard = fopen(argv[1], "r");
-    if (input == NULL)
+    if (memoryCard == NULL)
     {
         printf("Could not open file.\n");
         return 1;
     }
 
-    BYTE buffer[]; 
+    uint8_t buffer[512];
+
+   while (fread(&buffer, sizeof(uint8_t), 1, memoryCard) == 512) {
+
+   }
 
 
 }
