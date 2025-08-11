@@ -80,11 +80,22 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     double avgGreen = 0;
     int count = 0;
     RGBTRIPLE copy[height][width];
-    for (int i = 0; i < height; i++)
+
+ for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
         {
             copy[i][j] = image[i][j];
+
+        }
+    }
+
+
+
+    for (int i = 0; i < height; i++)
+    {
+        for (int j = 0; j < width; j++)
+        {
             if ((i + 1) < height && (i + 1) > 0) {
                 avgRed += copy[i + 1][j].rgbtRed;
                 avgBlue += copy[i + 1][j].rgbtBlue;
@@ -126,6 +137,22 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 avgGreen += copy[i + 1][j + 1].rgbtGreen;
                 count++;
              }
+
+              if ((j + 1) < width && (i - 1) >=0) {
+                 avgRed += copy[i - 1][j + 1].rgbtRed;
+                avgBlue += copy[i - 1][j + 1].rgbtBlue;
+                avgGreen += copy[i - 1][j + 1].rgbtGreen;
+                count++;
+             }
+
+              if ((j - 1) >= 0 && (i + 1) < height) {
+                 avgRed += copy[i + 1][j - 1].rgbtRed;
+                avgBlue += copy[i + 1][j - 1].rgbtBlue;
+                avgGreen += copy[i + 1][j - 1].rgbtGreen;
+                count++;
+             }
+
+
              avgRed = avgRed / count;
              avgBlue /= count;
              avgGreen /= count;
