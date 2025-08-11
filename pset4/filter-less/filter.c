@@ -112,7 +112,7 @@ int main(int argc, char *argv[])
 
         // Reflection
         case 'r':
-            reflect(height, width, image);
+            reflect(height, width, *image);
             break;
 
         // Sepia
