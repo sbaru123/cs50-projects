@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
     uint8_t buffer[512];
 
    while (fread(&buffer, sizeof(uint8_t), 1, memoryCard) == 512) {
-
+    
    }
 
 
