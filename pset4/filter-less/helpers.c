@@ -60,7 +60,9 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
       for (int i = 0; i < height; i++) {
         for (int j = 0; j < width; j++) {
-
+            if (width % 2 == 1) {
+                image[i][round(width / 2] =
+            }
 
         }
     }
