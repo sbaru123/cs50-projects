@@ -96,28 +96,33 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-            if ((i + 1) < height && (i + 1) > 0) {
+            avgRed = copy[i][j].rgbtRed;
+            avgBlue = copy[i][j].rgbtBlue;
+            avgGreen = copy[i][j].rgbtGreen;
+            count = 1;
+
+            if ((i + 1) < height) {
                 avgRed += copy[i + 1][j].rgbtRed;
                 avgBlue += copy[i + 1][j].rgbtBlue;
                 avgGreen += copy[i + 1][j].rgbtGreen;
                 count++;
             }
 
-             if ((i - 1) >= 0 && (i - 1) < height) {
+             if ((i - 1) >= 0) {
                  avgRed += copy[i - 1][j].rgbtRed;
                 avgBlue += copy[i - 1][j].rgbtBlue;
                 avgGreen += copy[i - 1][j].rgbtGreen;
                 count++;
              }
 
-             if ((j + 1) < width && (j + 1) > 0) {
+             if ((j + 1) < width) {
                 avgRed += copy[i][j + 1].rgbtRed;
                 avgBlue += copy[i][j + 1].rgbtBlue;
-                avgGreen += copy[i + 1][j].rgbtGreen;
+                avgGreen += copy[i][j + 1].rgbtGreen;
                  count++;
             }
 
-             if ((j - 1) >= 0 && (j - 1) < width) {
+             if ((j - 1) >= 0) {
                  avgRed += copy[i][j - 1].rgbtRed;
                 avgBlue += copy[i][j - 1].rgbtBlue;
                 avgGreen += copy[i][j - 1].rgbtGreen;
@@ -153,13 +158,17 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
              }
 
 
-             avgRed = avgRed / count;
+             avgRed /= count;
              avgBlue /= count;
              avgGreen /= count;
 
-             image[i][j].rgbtRed = (int) round(avgRed);
-             image[i][j].rgbtBlue = (int) round(avgBlue);
-             image[i][j].rgbtGreen = (int) round(avgGreen);
+             avgRed = (int) round(avgRed);
+             avgBlue = (int) round(avgBlue);
+             avgGreen = (int) round(avgGreen);
+
+             image[i][j].rgbtRed = avgRed;
+             image[i][j].rgbtBlue = avgBlue;
+             image[i][j].rgbtGreen = avgGreen;
         }
     }
       return;
