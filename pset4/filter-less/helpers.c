@@ -29,7 +29,7 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
 {
     double sepiaRed = 0;
     double sepiaGreen = 0;
-    double seipaBlue = 0;
+    double sepiaBlue = 0;
 
     for (int i = 0; i < height; i++) {
         for (int j = 0; j < width; j++) {
