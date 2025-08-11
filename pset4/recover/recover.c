@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
         sprintf(argv[1] , "%03i.jpg" , count);
         count++;
         FILE *img = fopen(argv[1] , "w");
-        fwrite()
+        fwrite(&buffer, sizeof(uint8_t), 1, img)
     }
    }
 
