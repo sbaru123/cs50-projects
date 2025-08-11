@@ -19,7 +19,9 @@ int main(int argc, char *argv[])
     uint8_t buffer[512];
 
    while (fread(&buffer, sizeof(uint8_t), 1, memoryCard) == 512) {
-    if (buffer[0] == )
+    if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] && 0xf0) == 0xe0) {
+        sprintf()
+    }
    }
 
 
