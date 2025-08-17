@@ -41,9 +41,10 @@ bool load(const char *dictionary)
         printf("Could not open dictionary.\n");
         return false;
     }
-    
-    while (fscanf(dictionary, "%s", ) != "EOF") {
 
+    char word[26];
+    while (fscanf(dictionary, "%s", word) != "EOF") {
+        
     }
     return false;
 }
