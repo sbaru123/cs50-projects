@@ -1,11 +1,12 @@
+#include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
 
 int main(int argc, char *argv[])
 {
-   if (argc != 2)
+    if (argc != 2)
     {
-        printf("Usage: ./recover card.raw\n");
+        printf("Usage: ./recover FILE\n");
         return 1;
     }
 
@@ -18,21 +19,37 @@ int main(int argc, char *argv[])
 
     uint8_t buffer[512];
     int count = 0;
+    int found_jpg = 1;
+    FILE *img = NULL;
+    char filename[8];
 
-
-   while (fread(&buffer, sizeof(uint8_t), 512, memoryCard) == 512) {
-    if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0) {
-        if (count == 0) {
-        FILE *img = fopen(argv[1] , "w");
-        sprintf(jpegFile , "%03i.jpg" , count);
-        fwrite(&buffer, sizeof(uint8_t), 1, img)
-        count++;
+    while (fread(buffer, 1, 512, memoryCard) == 512)
+    {
+        if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff &&
+            (buffer[3] & 0xf0) == 0xe0)
+        {
+            found_jpg = 0;
         }
-        else (count > 0) {
-            fclose(img);
+
+        if (found_jpg == 0)
+        {
+            if (count != 0)
+            {
+                fclose(img);
+            }
+
+            sprintf(filename, "%03i.jpg", count);
+            count++;
+
+            img = fopen(filename, "w");
+            fwrite(buffer, 1, 512, img);
+            found_jpg = 1;
+        }
+        else if (count != 0)
+        {
+            fwrite(buffer, 1, 512, img);
         }
     }
-   }
-
-
+    fclose(img);
+    fclose(memoryCard);
 }
