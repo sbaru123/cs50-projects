@@ -36,9 +36,10 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     fopen(dictionary);
+    int16_t buffer;
 
-    while (fread(&dictionary, sizeof(int16_t), 1, input) != 0) {
-
+    while (fread(&buffer, sizeof(int16_t), 1, dictionary) != 0) {
+        
     }
     return false;
 }
