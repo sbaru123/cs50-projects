@@ -35,11 +35,15 @@ unsigned int hash(const char *word)
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
-    fopen(dictionary);
-    int16_t buffer;
+    fopen(dictionary , "r");
+    if (dictionary == NULL)
+    {
+        printf("Could not open dictionary.\n");
+        return false;
+    }
+    
+    while (fscanf(dictionary, "%s", ) != "EOF") {
 
-    while (fread(&buffer, sizeof(int16_t), 1, dictionary) != 0) {
-        
     }
     return false;
 }
