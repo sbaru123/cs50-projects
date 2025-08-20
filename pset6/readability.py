@@ -21,9 +21,8 @@ def countSentences(text):
 
 def countWords(text):
     wordCount = 0
-    for i,char in enumerate(text):
-        if char.isspace() or char == ".":
-            if text[i - 1].isalpha == True:
+    for char in enumerate(text):
+        if char.isspace():
                 wordCount += 1
 
     return wordCount
