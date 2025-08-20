@@ -23,8 +23,8 @@ def countWords(text):
     wordCount = 0
     for i,char in enumerate(text):
         if char.isspace() or char == ".":
-            if text[i - 1].
-            wordCount += 1
+            if text[i - 1].isalpha == True:
+                wordCount += 1
 
     return wordCount
 
