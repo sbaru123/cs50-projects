@@ -11,6 +11,13 @@ def main():
     print(letters)
     print(sentences)
 
+    S = sentences / words
+    L = letters / words
+
+    gradeLevel = 0.0588 * L - 0.296 * S - 15.8
+
+    print(gradeLevel)
+
 def countSentences(text):
     sentCount = 0
     for char in text:
@@ -22,7 +29,7 @@ def countSentences(text):
 
 def countWords(text):
     wordCount = 0
-    for char in enumerate(text):
+    for char in text:
         if char.isspace():
                 wordCount += 1
 
