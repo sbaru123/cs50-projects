@@ -11,8 +11,9 @@ def main():
 
 def countWords(input_string):
     wordCount = 0
-    for i in range(len(text)):
-        if 
+    for char in range(len(text)):
+        if char.isspace() or:
+            wordCount += 1
 
 def countLetters(input_string):
     letters = [char for char in input_string if char.isalpha()]
