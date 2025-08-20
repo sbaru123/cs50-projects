@@ -11,8 +11,8 @@ def main():
     print(letters)
     print(sentences)
 
-    S = sentences / words
-    L = letters / words
+    S = (sentences / words) * 100
+    L = (letters / words) * 100
 
     gradeLevel = 0.0588 * L - 0.296 * S - 15.8
 
