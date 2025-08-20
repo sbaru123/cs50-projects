@@ -9,6 +9,7 @@ def main():
 
     print(words)
     print(letters)
+    print(sentences)
 
 def countSentences(text):
     sentCount = 0
