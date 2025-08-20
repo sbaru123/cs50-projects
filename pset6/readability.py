@@ -1,7 +1,9 @@
 from cs50 import get_string
 
-text = get_string("Text: ")
+def main():
+    text = get_string("Text: ")
 
-words = len(text)
+    words = len(text)
 
-sentences = 
+def countLetters(input):
+    for i in range len()
