@@ -23,6 +23,7 @@ def countWords(text):
     wordCount = 0
     for char in text:
         if char.isspace() or char == ".":
+            if char 
             wordCount += 1
 
     return wordCount
