@@ -9,14 +9,14 @@ def main():
     print(words)
     print(letters)
 
-def countWords(input_string):
+def countWords(text):
     wordCount = 0
     for char in range(len(text)):
-        if char.isspace() or:
+        if char.isspace() or char == ".":
             wordCount += 1
 
-def countLetters(input_string):
-    letters = [char for char in input_string if char.isalpha()]
+def countLetters(text):
+    letters = [char for char in text if char.isalpha()]
     return len(letters)
 
 main()
