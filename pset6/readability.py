@@ -6,5 +6,11 @@ def main():
     words = len(text)
     letters = countLetters(text)
 
-def countLetters(input):
-    for i in range len()
+    print(words)
+    print(letters)
+
+def countLetters(input_string):
+    letters = [char for char in input_string if char.isalpha()]
+    return len(letters)
+
+main()
