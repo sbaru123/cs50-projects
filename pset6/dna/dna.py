@@ -1,5 +1,6 @@
 import csv
 from sys import argv
+from collections import Counter
 
 
 def main():
@@ -32,9 +33,9 @@ def main():
                     if match == rows[j].get("" , headerNames[i]):
                         names.append(rows[j].get("name"))
 
-            for _ in range len(names)
-                if name 
-        rows[1].get("name")
+
+        name = find_most_common_string(names)
+        print(name)
 
 
 
@@ -81,6 +82,32 @@ def longest_match(sequence, subsequence):
 
     # After checking for runs at each character in seqeuence, return longest run found
     return longest_run
+
+def find_most_common_string(string_list):
+  """
+  Finds the most common string in a list of strings.
+
+  Args:
+    string_list: A list of strings.
+
+  Returns:
+    The most common string in the list. If there's a tie, it returns one of them.
+    Returns None if the list is empty.
+  """
+  if not string_list:
+    return None
+
+  # Create a Counter object from the list
+  counts = Counter(string_list)
+
+  # Use most_common(1) to get the most frequent element and its count
+  # It returns a list of tuples, e.g., [('apple', 3)]
+  most_common_element_tuple = counts.most_common(1)
+
+  # Extract the string from the tuple
+  most_common_string = most_common_element_tuple[0][0]
+
+  return most_common_string
 
 
 main()
