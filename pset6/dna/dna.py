@@ -11,35 +11,38 @@ def main():
         sys.exit(1)
     else:
 
-    # TODO: Read database file into a variable
-        dataFile = open(argv[1] , "r")
+        # TODO: Read database file into a variable
+        dataFile = open(argv[1], "r")
 
     # TODO: Read DNA sequence file into a variable
-        dnaFile = open(argv[2] , "r")
+        dnaFile = open(argv[2], "r")
 
-        #print(dataFile.read())
+        # print(dataFile.read())
 
         rows = []
-        with open(argv[1] , "r") as dataFile:
+        with open(argv[1], "r") as dataFile:
             reader = csv.DictReader(dataFile)
             headerNames = reader.fieldnames
             for row in reader:
                 rows.append(row)
 
+            # print(rows)
             names = []
             for i in range(1, len(headerNames)):
+                dnaFile.seek(0)
                 match = longest_match(dnaFile.read(), headerNames[i])
+                # print("Match:" , match)
                 for j in range(len(rows)):
-                    if match == rows[j].get("" , headerNames[i]):
-                        print(rows[j].get("name"))
+                    # print(rows[j].get(headerNames[i]))
+                    if match == int(rows[j].get(headerNames[i])):
                         names.append(rows[j].get("name"))
 
-
         name = find_most_common_string(names)
-        print(name)
 
-
-
+        if names.count(name) == len(headerNames) - 1:
+            print(name)
+        else:
+            print("No match")
 
     # TODO: Find longest match of each STR in DNA sequence
     # TODO: Check database for matching profiles
@@ -84,31 +87,32 @@ def longest_match(sequence, subsequence):
     # After checking for runs at each character in seqeuence, return longest run found
     return longest_run
 
+
 def find_most_common_string(string_list):
-  """
-  Finds the most common string in a list of strings.
+    """
+    Finds the most common string in a list of strings.
 
-  Args:
-    string_list: A list of strings.
+    Args:
+      string_list: A list of strings.
 
-  Returns:
-    The most common string in the list. If there's a tie, it returns one of them.
-    Returns None if the list is empty.
-  """
-  if not string_list:
-    return None
+    Returns:
+      The most common string in the list. If there's a tie, it returns one of them.
+      Returns None if the list is empty.
+    """
+    if not string_list:
+        return None
 
-  # Create a Counter object from the list
-  counts = Counter(string_list)
+    # Create a Counter object from the list
+    counts = Counter(string_list)
 
-  # Use most_common(1) to get the most frequent element and its count
-  # It returns a list of tuples, e.g., [('apple', 3)]
-  most_common_element_tuple = counts.most_common(1)
+    # Use most_common(1) to get the most frequent element and its count
+    # It returns a list of tuples, e.g., [('apple', 3)]
+    most_common_element_tuple = counts.most_common(1)
 
-  # Extract the string from the tuple
-  most_common_string = most_common_element_tuple[0][0]
+    # Extract the string from the tuple
+    most_common_string = most_common_element_tuple[0][0]
 
-  return most_common_string
+    return most_common_string
 
 
 main()
