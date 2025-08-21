@@ -13,7 +13,13 @@ def main():
     gradeLevel = (0.0588 * L) - (0.296 * S) - 15.8
     gradeLevel = int(round(gradeLevel , 0))
 
-    print(gradeLevel)
+    if gradeLevel < 1:
+        print("Before Grade 1")
+    elif gradeLevel > 16:
+        print("Grade 16+")
+    else:
+        print("Grade" , gradeLevel)
+
 
 def countSentences(text):
     sentCount = 0
