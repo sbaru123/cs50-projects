@@ -25,8 +25,9 @@ def main():
             for row in reader:
                 rows.append(row)
 
-            for i in range(1, len(headerNames))
-                longest_match(dnaFile, headerNames[i]) ==
+            for j in range
+                for i in range(1, len(headerNames))
+                    longest_match(dnaFile, headerNames[i]) == rows[j].get("" , headerNames[i])
 
         rows[1].get("name")
 
