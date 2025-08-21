@@ -5,6 +5,8 @@ from sys import argv
 def main():
 
     # TODO: Check for command-line usage
+    if len(argv) != 3:
+        
 
     # TODO: Read database file into a variable
 
