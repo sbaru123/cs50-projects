@@ -1,13 +1,15 @@
 import csv
-from sys import argv
+import sys
 
 
 def main():
 
     # TODO: Check for command-line usage
     if len(argv) != 3:
+        print("Program uses 3 command-line argument")
+        sys.exit(1)
+    else:
         
-
     # TODO: Read database file into a variable
 
     # TODO: Read DNA sequence file into a variable
