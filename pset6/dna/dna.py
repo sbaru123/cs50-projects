@@ -19,9 +19,17 @@ def main():
         #print(dataFile.read())
         #print(dnaFile.read())
 
+        #with open(argv[1] , "r") as dataFile:
+            #reader = csv.DictReader(dataFile)
+            #print(reader.fieldnames)
+
+        rows = []
         with open(argv[1] , "r") as dataFile:
             reader = csv.DictReader(dataFile)
-            print(reader.fieldnames)
+            for row in reader:
+                rows.append(row)
+
+        print(rows)
 
 
     # TODO: Find longest match of each STR in DNA sequence
