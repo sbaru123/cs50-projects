@@ -17,7 +17,6 @@ def main():
         dnaFile = open(argv[2] , "r")
 
         #print(dataFile.read())
-        print(dnaFile.read())
 
         rows = []
         with open(argv[1] , "r") as dataFile:
@@ -26,7 +25,9 @@ def main():
             for row in reader:
                 rows.append(row)
 
-        print(rows.get("Alice"))
+            for _ in dnaFile
+                if longest_match(dnaFile, )
+        rows[1].get("name")
 
 
 
