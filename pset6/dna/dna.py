@@ -26,7 +26,7 @@ def main():
             for row in reader:
                 rows.append(row)
 
-        print(rows)
+        print(rows.get("Alice"))
 
 
 
