@@ -11,13 +11,15 @@ def main():
     else:
 
     # TODO: Read database file into a variable
-    dataFile = open(argv[1] , "r")
+        dataFile = open(argv[1] , "r")
 
     # TODO: Read DNA sequence file into a variable
-    dnaFile = open(argv[2] , "r")
+        dnaFile = open(argv[2] , "r")
+
+        dataFile.read()
 
     # TODO: Find longest match of each STR in DNA sequence
-    
+
 
     # TODO: Check database for matching profiles
 
