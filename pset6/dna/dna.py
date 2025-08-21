@@ -17,24 +17,22 @@ def main():
         dnaFile = open(argv[2] , "r")
 
         #print(dataFile.read())
-        #print(dnaFile.read())
-
-        with open(argv[1] , "r") as dataFile:
-            reader = csv.DictReader(dataFile)
-            print(reader.fieldnames)
+        print(dnaFile.read())
 
         rows = []
         with open(argv[1] , "r") as dataFile:
             reader = csv.DictReader(dataFile)
+            headerNames = reader.fieldnames
             for row in reader:
                 rows.append(row)
 
-        
+        print(rows{1 , 1})
+
+
+
 
 
     # TODO: Find longest match of each STR in DNA sequence
-
-
     # TODO: Check database for matching profiles
 
     return
