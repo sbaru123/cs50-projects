@@ -26,10 +26,10 @@ def main():
                 rows.append(row)
 
 
-                for i in range(1, len(headerNames))
-                    match = longest_match(dnaFile, headerNames[i])
-                    for j in range 
-                        if match == rows[j].get("" , headerNames[i])
+                for i in range(1, len(headerNames)):
+                    match = longest_match(dnaFile, headerNames[i]):
+                    for j in range:
+                        if match == rows[j].get("" , headerNames[i]):
         rows[1].get("name")
 
 
