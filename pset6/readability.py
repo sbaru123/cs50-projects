@@ -11,8 +11,8 @@ def main():
     print(letters)
     print(sentences)
 
-    S = (sentences / words) * 100
-    L = (letters / words) * 100
+    S = round(((sentences / words) * 100) , 2)
+    L = round(((letters / words) * 100) , 2)
 
     print(S)
     print(L)
