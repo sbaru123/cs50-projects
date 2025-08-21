@@ -25,15 +25,15 @@ def main():
             for row in reader:
                 rows.append(row)
 
+            names = {}
+            for i in range(1, len(headerNames)):
+                match = longest_match(dnaFile.read(), headerNames[i])
+                for j in range(len(rows)):
+                    if match == rows[j].get("" , headerNames[i]):
+                        names.append(rows[j].get("name"))
 
-                for i in range(1, len(headerNames)):
-                    match = longest_match(dnaFile, headerNames[i])
-                    for j in range(len(rows)):
-                        if match == rows[j].get("" , headerNames[i]):
-                            print(len(rows))
 
         rows[1].get("name")
-
 
 
 
