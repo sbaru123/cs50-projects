@@ -31,6 +31,7 @@ def main():
                 match = longest_match(dnaFile.read(), headerNames[i])
                 for j in range(len(rows)):
                     if match == rows[j].get("" , headerNames[i]):
+                        print(rows[j].get("name"))
                         names.append(rows[j].get("name"))
 
 
