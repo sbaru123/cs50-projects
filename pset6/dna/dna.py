@@ -9,12 +9,15 @@ def main():
         print("Program uses 3 command-line argument")
         sys.exit(1)
     else:
-        
+
     # TODO: Read database file into a variable
+    dataFile = open(argv[1] , "r")
 
     # TODO: Read DNA sequence file into a variable
+    dnaFile = open(argv[2] , "r")
 
     # TODO: Find longest match of each STR in DNA sequence
+    
 
     # TODO: Check database for matching profiles
 
