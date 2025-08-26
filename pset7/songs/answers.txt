@@ -1,0 +1,2 @@
+I would find the average energy, valence, and danceability of the top 100 songs and use that index to determine what kind of mood that person listens too.
+Then, using this index, I would create the top two moods and return it to the user. 
