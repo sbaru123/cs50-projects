@@ -30,4 +30,5 @@ SELECT name FROM people WHERE license_plate IN
 (SELECT license_plate FROM bakery_security_logs WHERE month = 7 AND day = 28 AND year = 2024 AND hour = 10 AND minute >= 15 AND minute <= 25 AND activity = 'exit')
 ORDER BY name;
 --Name of people within 10 minutes who were there at the robbery
---Bruce, Iman, and Luca matches both lists where they entered
+--Bruce, Iman, and Luca matches both lists where they left from bakery in this 10 minute time frame 
+
