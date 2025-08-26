@@ -21,7 +21,7 @@ SELECT account_number, atm_location, transaction_type FROM atm_transactions WHER
 
 SELECT name FROM people WHERE id IN
 (SELECT person_id FROM bank_accounts WHERE account_number IN
-(SELECT account_number FROM atm_transactions WHERE month = 7 AND day = 28 AND year = 2024 AND transaction_type = 'withdraw' AND atm_location = 'Humphrey Lane'))
+(SELECT account_number FROM atm_transactions WHERE month = 7 AND day = 28 AND year = 2024 AND transaction_type = 'withdraw' AND atm_location = 'Leggett Street'))
 ORDER BY name;
 --Names of all accounts that withdrew money at that day on Humphrey Lane
 
