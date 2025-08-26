@@ -34,3 +34,4 @@ ORDER BY name;
 --Bruce, Iman, and Luca matches both lists where they left from bakery in this 10 minute time frame
 
 
+SELECT id, origin_airport_id, destination_airport_id FROM flights WHERE month = 7 AND day = 29 AND year = 2024 ORDER BY hour;
