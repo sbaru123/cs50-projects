@@ -47,6 +47,7 @@ SELECT name FROM people WHERE phone_number IN
 (SELECT receiver FROM phone_calls WHERE month = 7 AND day = 28 AND year = 2024 AND duration < 60)
 --Recievers: Robin
 
-SELECT
-(SELECT account_number FROM bank_accounts WHERE person_id IN
+
+SELECT account_number FROM bank_accounts WHERE person_id IN
 (SELECT id FROM people WHERE name = 'Bruce');
+--Get Bruce's account number
