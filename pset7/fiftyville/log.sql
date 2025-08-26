@@ -34,4 +34,9 @@ ORDER BY name;
 --Bruce, Iman, and Luca matches both lists where they left from bakery in this 10 minute time frame
 
 
-SELECT id, origin_airport_id, destination_airport_id FROM flights WHERE month = 7 AND day = 29 AND year = 2024 ORDER BY hour;
+SELECT name FROM people WHERE passport_number IN
+(SELECT passport_number FROM passengers WHERE flight_id = 36)
+ORDER BY name;
+--Bruce and Luca were on the earliest flight.
+
+SELECT caller, receiver, duration FROM phone_calls WHERE month = 7 AND day = 28 AND year = 2024 AND hour = 10 AND minute >= 15 AND minute <= 25
