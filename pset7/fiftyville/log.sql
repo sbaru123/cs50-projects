@@ -41,10 +41,10 @@ ORDER BY name;
 
 SELECT name FROM people WHERE phone_number IN
 (SELECT caller FROM phone_calls WHERE month = 7 AND day = 28 AND year = 2024 AND duration < 60)
-ORDER BY name
+
 --Callers: Bruce
 
 SELECT name FROM people WHERE phone_number IN
 (SELECT receiver FROM phone_calls WHERE month = 7 AND day = 28 AND year = 2024 AND duration < 60)
-ORDER BY name
+
 --Recievers
