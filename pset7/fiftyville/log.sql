@@ -39,4 +39,12 @@ SELECT name FROM people WHERE passport_number IN
 ORDER BY name;
 --Bruce and Luca were on the earliest flight.
 
-SELECT caller, receiver, duration FROM phone_calls WHERE month = 7 AND day = 28 AND year = 2024 AND hour = 10 AND minute >= 15 AND minute <= 25
+SELECT name FROM people WHERE phone_number IN
+(SELECT caller FROM phone_calls WHERE month = 7 AND day = 28 AND year = 2024 AND duration < 60)
+ORDER BY name
+--Callers: Bruce
+
+SELECT name FROM people WHERE phone_number IN
+(SELECT receiver FROM phone_calls WHERE month = 7 AND day = 28 AND year = 2024 AND duration < 60)
+ORDER BY name
+--Recievers
